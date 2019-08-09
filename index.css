@@ -1,0 +1,150 @@
+:root{
+    --grisOscuro: #202329;
+    --grisClaro:#40434A;
+    --agua: #009A9C;
+    --blanco: #EFEEEB;
+}
+*{ 
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+}
+body{
+    background-color: var(--blanco);
+    color: var(--grisOscuro);
+    font-family: 'Lora', serif;
+}
+h3{
+    color: var(--agua);
+}
+aside img{
+    width: 85%;
+    border-radius: 100px;
+}
+aside{
+    display: inline-block;
+    width: 20%;
+    background-color: ;
+    vertical-align: top;
+    position: fixed;
+    border-radius: 0 0 10px 0;
+    padding: .5em;
+}
+.soy{
+    margin: 15px 0;
+    font-weight: 100;
+    font-size: 1.25em;
+    line-height: 1.5em;
+}
+aside div{
+    padding: 5%;
+    text-align: center;
+}
+main{
+    width: 60%;
+    margin-left: 20%;
+    display: inline-block;
+}
+nav li{
+    text-align: center;
+    padding: .65em 0;
+}
+nav li a{ 
+    text-decoration: none;
+    color: var(--grisOscuro);
+    font-family: 'Lora', serif;
+    padding-bottom: .5em;
+}
+.portfolio ul{
+    text-align: center;
+}
+li{
+    list-style: none;
+}
+.card{
+    margin: 2%;
+    padding: 1%;
+    text-align: justify;
+}
+.titulo{
+    padding-bottom: .5%;
+}
+.titulo-sin{
+    font-weight: 300;
+    color: var(--agua);
+    font-style: italic;
+}
+.no-bold{
+    font-weight: 300;
+}
+.section-3{
+    width: 30%;
+    margin-left: 1.2%;
+    margin-right: 1.2%;
+    display: inline-block;
+    vertical-align: top;
+    text-align: initial;
+    font-size: .9em;
+}
+li p{
+    padding-bottom: 2%;
+}
+.portfolio{
+    background-color: var(--grisOscuro);
+}
+.portfolio img{
+    width: 100%;
+
+}
+.portfolio li{
+    display: inline-block;
+    margin: 0 auto;
+    width: 11%;
+}
+.contacto{
+    float: right;
+    width: 20%;
+    position: fixed;
+    border-radius: 0 0 0 10px;
+    background-color: var(--grisOscuro);
+    padding: 2%;
+    text-align: end;
+    overflow: hidden;
+    color: var(--blanco);
+    list-style-type: none;
+}
+.contacto h3{
+    font-size: 1.5em;
+}
+.contacto li{
+    padding: .65em 0;
+    border-radius: 10px;
+}
+.contacto a{
+    padding: 3%;
+    text-decoration: none;
+    color: var(--blanco);
+    padding-bottom: .5em;
+}
+.contacto a:hover,
+nav li a:hover{
+    transition: all 0.5s;
+    color: var(--agua);
+    border-bottom: 1px dotted var(--agua);
+    font-weight: 100;
+}
+.clear{
+    clear: both;
+}
+footer{
+    margin: 0 0;
+    padding: 2%;
+    text-align: justify;
+}
+footer li{
+    transition: all .9s ease;
+}
+footer li:hover{
+    transform: scale(1.5);
+    transition: all .5s ease;
+}
