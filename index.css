@@ -14,6 +14,10 @@ body{
     color: var(--grisOscuro);
     font-family: 'Lora', serif;
 }
+.content{
+    display: flex;
+    align-items: flex-start;
+}
 h3{
     color: var(--agua);
 }
@@ -26,14 +30,13 @@ aside{
     width: 20%;
     background-color: ;
     vertical-align: top;
-    position: fixed;
     border-radius: 0 0 10px 0;
     padding: .5em;
 }
 .soy{
     margin: 15px 0;
     font-weight: 100;
-    font-size: 1.25em;
+    font-size: 1.1em;
     line-height: 1.5em;
 }
 aside div{
@@ -42,7 +45,6 @@ aside div{
 }
 main{
     width: 60%;
-    margin-left: 20%;
     display: inline-block;
 }
 nav li{
@@ -89,22 +91,8 @@ li{
 li p{
     padding-bottom: 2%;
 }
-.portfolio{
-    background-color: var(--grisOscuro);
-}
-.portfolio img{
-    width: 100%;
-
-}
-.portfolio li{
-    display: inline-block;
-    margin: 0 auto;
-    width: 11%;
-}
 .contacto{
-    float: right;
     width: 20%;
-    position: fixed;
     border-radius: 0 0 0 10px;
     background-color: var(--grisOscuro);
     padding: 2%;
@@ -114,7 +102,7 @@ li p{
     list-style-type: none;
 }
 .contacto h3{
-    font-size: 1.5em;
+    font-size: 1.25em;
 }
 .contacto li{
     padding: .65em 0;
@@ -126,26 +114,58 @@ li p{
     color: var(--blanco);
     padding-bottom: .5em;
 }
+.contacto a,
+nav li a{
+    transition: all 0.5s ease;
+}
+
 .contacto a:hover,
 nav li a:hover{
-    transition: all 0.5s;
+    transition: all 0.5s ease;
     color: var(--agua);
     border-bottom: 1px dotted var(--agua);
-    font-weight: 100;
 }
-.clear{
-    clear: both;
-}
+
+/* FOOTER */
+
 footer{
     margin: 0 0;
     padding: 2%;
     text-align: justify;
 }
+.portfolio{
+    background-color: var(--grisOscuro);
+}
+.portfolio img{
+    width: 100%;
+    border-radius:100%;
+}
+.portfolio h4{
+    font-size: 1.1rem;
+    color: var(--blanco);
+    text-align: center;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid var(--agua);
+    
+}
 footer li{
     transition: all .9s ease;
+    font-weight: lighter;
+    color: var(--blanco);
+    text-align: center;
 }
-footer li:hover{
-    transform: scale(1.5);
+.portfolio-flex{
+    display: flex;
+}
+.portfolio-child{ 
+    flex-basis: 25%;
+    padding: 2.5rem;
+}
+.portfolio-child img{
+    transition: all .5s ease;
+}
+.portfolio-child:hover img{
+    transform: scale(1.15);
     transition: all .5s ease;
 }
 .rellenar{
