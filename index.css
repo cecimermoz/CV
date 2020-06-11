@@ -1,3 +1,4 @@
+/* GENERAL */
 :root{
     --grisOscuro: #202329;
     --grisClaro:#40434A;
@@ -13,17 +14,24 @@ body{
     background-color: var(--blanco);
     color: var(--grisOscuro);
     font-family: 'Lora', serif;
+    min-width: 100px;
 }
 .content{
-    display: flex;
     align-items: flex-start;
 }
 h3{
     color: var(--agua);
+    font-size: 1.25em;
+    padding-bottom: 3%;
 }
+.mob{
+    display: block;
+}
+/* --------- MAIN ---------- */
+
 aside img{
     width: 85%;
-    border-radius: 100px;
+    border-radius: 100%;
 }
 aside{
     display: inline-block;
@@ -32,6 +40,11 @@ aside{
     vertical-align: top;
     border-radius: 0 0 10px 0;
     padding: .5em;
+}
+#nombre{
+    order: 0;
+    flex-direction: column;
+    flex-basis: 25%;
 }
 .soy{
     margin: 15px 0;
@@ -43,20 +56,72 @@ aside div{
     padding: 5%;
     text-align: center;
 }
+
+/* Main itself */
 main{
+    order: 0;
     width: 60%;
     display: inline-block;
+    flex-basis: 55%;
 }
-nav li{
+.mob{
+    display: none;
+}
+#menu{
+    display: block;
+}
+#menu li{
     text-align: center;
     padding: .65em 0;
 }
-nav li a{ 
+#menu li a{ 
     text-decoration: none;
     color: var(--grisOscuro);
     font-family: 'Lora', serif;
     padding-bottom: .5em;
 }
+#menu li a:hover{ 
+    color: var(--agua);
+    padding-bottom: .5em;
+    border-bottom: 1px solid var(--agua);
+
+}
+.contacto{
+    order: 1;
+    flex-direction: column;
+    width: 20%;
+    border-radius: 0 0 0 10px;
+    background-color: var(--grisOscuro);
+    padding: 2%;
+    text-align: end;
+    overflow: hidden;
+    color: var(--blanco);
+    list-style-type: none;
+}
+
+.contacto {
+    flex-basis: 20%;
+}
+.contacto a{
+    padding: 8% 0;
+    text-decoration: none;
+    color: var(--blanco);
+    padding-bottom: .5em;
+}
+.contacto a,
+#menu li a{
+    transition: all 0.5s ease;
+    font-weight: bolder;
+}
+
+.contacto a:hover,
+nav li a:hover{
+    transition: all 0.5s ease;
+    color: var(--agua);
+}
+
+
+/* ------- Footer ------- */
 .portfolio ul{
     text-align: center;
 }
@@ -67,6 +132,9 @@ li{
     margin: 2%;
     padding: 1%;
     text-align: justify;
+}
+.flex{
+    display: flex;
 }
 .titulo{
     padding-bottom: .5%;
@@ -79,7 +147,7 @@ li{
 .no-bold{
     font-weight: 300;
 }
-.section-3{
+.section-flex{
     width: 30%;
     margin-left: 1.2%;
     margin-right: 1.2%;
@@ -90,40 +158,6 @@ li{
 }
 li p{
     padding-bottom: 2%;
-}
-.contacto{
-    width: 20%;
-    border-radius: 0 0 0 10px;
-    background-color: var(--grisOscuro);
-    padding: 2%;
-    text-align: end;
-    overflow: hidden;
-    color: var(--blanco);
-    list-style-type: none;
-}
-.contacto h3{
-    font-size: 1.25em;
-}
-.contacto li{
-    padding: .65em 0;
-    border-radius: 10px;
-}
-.contacto a{
-    padding: 3%;
-    text-decoration: none;
-    color: var(--blanco);
-    padding-bottom: .5em;
-}
-.contacto a,
-nav li a{
-    transition: all 0.5s ease;
-}
-
-.contacto a:hover,
-nav li a:hover{
-    transition: all 0.5s ease;
-    color: var(--agua);
-    border-bottom: 1px dotted var(--agua);
 }
 
 /* FOOTER */
@@ -154,9 +188,6 @@ footer li{
     color: var(--blanco);
     text-align: center;
 }
-.portfolio-flex{
-    display: flex;
-}
 .portfolio-child{ 
     flex-basis: 25%;
     padding: 2.5rem;
@@ -170,4 +201,124 @@ footer li{
 }
 .rellenar{
     min-height: 500px;
+}
+
+
+/* ------ MEDIAQUERIES ----- */
+
+@media (min-width: 400px) and (max-width: 850px) {
+
+    .flex{
+        flex-direction: column;
+    }
+    /* MENU */
+    #menu{
+        display: none;
+    }
+    #nombre{
+        width: 80%;
+        align-self: center;
+    }
+    aside img{
+        width: 80%;
+    }
+    /* MAIN */
+    .card{
+        margin: 0;
+        margin-bottom: 2rem;
+
+    }
+    main{
+        width: 80%;
+        margin: auto;
+        margin-bottom: 2rem;
+    }
+    .card-flex{
+        align-items: center;
+    }
+    .section-flex{
+        width: 100%;
+        margin-bottom: 1.5rem;
+        text-align: center;
+    }
+    .mob{
+        display: block;
+    }
+    .contacto{
+        order: -1;
+        width: 100%;
+        border-radius: 0;
+        text-align: center;
+    }
+    .contacto a{
+        padding: 3% 0;
+    }
+    /* FOOTER */
+    .portfolio .flex{
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .portfolio-child{
+        padding: 2.5rem;
+        width: 50%;
+    }
+    footer{
+        padding: 1rem;
+    }
+}
+@media (max-width: 400px) {
+
+    .flex{
+        flex-direction: column;
+    }
+    /* MENU */
+    #menu{
+        display: none;
+    }
+    #nombre{
+        width: 80%;
+        align-self: center;
+    }
+    aside img{
+        width: 80%;
+    }
+    /* MAIN */
+    .card{
+        margin: 0;
+        margin-bottom: 2rem;
+
+    }
+    main{
+        width: 80%;
+        margin: auto;
+        margin-bottom: 2rem;
+    }
+    .card-flex{
+        align-items: center;
+    }
+    .section-flex{
+        width: 100%;
+        margin-bottom: 1.5rem;
+        text-align: center;
+    }
+    .mob{
+        display: block;
+    }
+    .contacto{
+        order: -1;
+        width: 100%;
+        border-radius: 0;
+        text-align: center;
+    }
+    .contacto a{
+        padding: 3% 0;
+    }
+    /* FOOTER */
+    .portfolio .flex{
+        flex-direction: column;
+    }
+    footer{
+        padding: 1rem;
+    }
 }

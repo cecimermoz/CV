@@ -9,8 +9,8 @@
     <title>Cecilia Mermoz | CV</title>
 </head>
 <body>
-    <div class="content">
-        <aside class="nombre">
+    <div class="content flex">
+        <aside id="nombre" class="flex">
             <div>
                 <img src="imgs/foto.jpeg" alt="Cecilia Mermoz">
             </div>
@@ -19,7 +19,7 @@
                 <h3 class="soy"><em>Diseñadora Multimedia</em></h3>
                 <h3 class="soy"><em>Web Developer Full Stack Jr.</em></h3>
             </div>
-            <nav>
+            <nav id="menu">
                 <ul>
                     <li><a href="#1">Quien soy</a></li>
                     <li><a href="#2">Experiencia Laboral</a></li>
@@ -43,6 +43,7 @@
                         me permite brindar un apoyo creativo integral a la medida del cliente.</p>
                 </div>
             </section>
+            
             <section class="card" id="2">
                 <h3 class="titulo">Experiencia Laboral</h3>
                 <hr><br>
@@ -99,8 +100,8 @@
                 </div>
             </section>
 
-            <section class="card triptico" id="4">
-                <div class="section-3">
+            <section class="card flex card-flex" id="4">
+                <div class="section-flex">
                     <h3 class="titulo">Softwares</h3>
                     <hr><br>
                     <ul>
@@ -113,7 +114,7 @@
                         <li>Audition</li>
                     </ul>
                 </div>
-                <div class="section-3">
+                <div class="section-flex">
                     <h3 class="titulo">Lenguajes & Skills</h3>
                     <hr><br>
                     <ul>
@@ -121,6 +122,7 @@
                         <li>CSS / CSS3</li>
                         <li>SASS</li>
                         <li>JavaScript</li>
+                        <li>Bootstrap</li>
                         <li>JQuery</li>
                         <li>JSON</li>
                         <li>AJAX</li>
@@ -129,7 +131,7 @@
                         <li>NodeJs</li>
                     </ul>
                 </div>
-                <div class="section-3">
+                <div class="section-flex">
                     <h3 class="titulo">Conocimientos</h3>
                     <hr><br>
                     <ul>
@@ -138,9 +140,10 @@
                         <li>UX / UI</li>
                         <li>Wireframing</li>
                         <li>Cross Browser</li>
+                        <li>Flexbox</li>
                     </ul>
                 </div>
-                <div class="section-3">
+                <div class="section-flex">
                     <h3 class="titulo">Idiomas</h3>
                     <hr><br>
                     <ul>
@@ -158,27 +161,21 @@
                 </div>
             </section>
         </main>
-        <aside class="contacto">
+        <aside class="contacto flex">
             <h3>Contacto</h3>
-            <ul>
-                <li>
-                    <a href="https://www.linkedin.com/in/ceciliamermoz/">Linkedin</a>
-                </li>
-                <li> 
-                    <a href="https://api.whatsapp.com/send?phone=541158739081">Whatsapp</a>
-                    </li>
-                <li>
-                    <a href="mailto:ceee14m@gmail.com">Gmail</a>
-                    </li>
-            </ul>
+            <a href="https://www.linkedin.com/in/ceciliamermoz/">Linkedin</a>
+            <a href="mailto:ceee14m@gmail.com">Gmail</a>
+            <a href="https://api.whatsapp.com/send?phone=541158739081">Whatsapp</a>
+            <a class="mob" href="https://www.behance.net/ceciliamermoz">Portfolio Gráfico</a>
+            <a class="mob" href="https://github.com/cecimermoz">Github</a>
         </aside>
     </div>
     <footer class="portfolio" id="5">
         <h3 class="titulo">Portfolio Web</h3>
-        <div class="portfolio-flex">
+        <div class="flex">
             <div class="portfolio-child">
                 <a href="https://cecimermoz.github.io/Escribiendo/" class="link"><img src="./imgs/escribiendo.png" alt=""></a>
-                <h4>Escribiendo</h4><br>
+                <h4>Tipying Game</h4><br>
                 <ul>
                     <li>HTML</li>
                     <li>CSS3</li>
@@ -207,7 +204,7 @@
             </div>
             <div class="portfolio-child">
                 <a href="https://cecimermoz.github.io/rompecabeza/" class="link"><img src="./imgs/puzzle.png" alt=""></a>
-                <h4>Rompecabezas</h4><br>
+                <h4>Puzzle</h4><br>
                 <ul>
                     <li>CSS</li>
                     <li>JavaScript</li>
