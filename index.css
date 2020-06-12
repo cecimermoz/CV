@@ -206,21 +206,34 @@ footer li{
 
 /* ------ MEDIAQUERIES ----- */
 
-@media (min-width: 400px) and (max-width: 850px) {
-
+@media (min-width: 500px) and (max-width: 850px) {
     .flex{
-        flex-direction: column;
+        flex-direction: row;
+        flex-wrap: wrap;
+        /* justify-content: start; */
     }
     /* MENU */
     #menu{
         display: none;
     }
     #nombre{
-        width: 80%;
-        align-self: center;
+        flex-basis: 50%;
+        align-self: stretch;
+        border-radius: 0;
+        background-color: darksalmon;
+    }
+    #nombre h3{
+        color: white;
+    }
+    aside div{
+        padding: 0;
     }
     aside img{
-        width: 80%;
+        width: 35%;
+    }
+    .soy{
+        line-height: 0;
+        font-size: 1rem;
     }
     /* MAIN */
     .card{
@@ -231,14 +244,17 @@ footer li{
     main{
         width: 80%;
         margin: auto;
-        margin-bottom: 2rem;
+        margin: 2rem auto;
     }
     .card-flex{
+        flex-direction: row;
         align-items: center;
     }
     .section-flex{
-        width: 100%;
+        flex-basis: 45%;
+        align-self: baseline;
         margin-bottom: 1.5rem;
+        margin: 0 auto 1.5rem auto;
         text-align: center;
     }
     .mob{
@@ -246,12 +262,16 @@ footer li{
     }
     .contacto{
         order: -1;
-        width: 100%;
+        flex-basis: 50%;
         border-radius: 0;
         text-align: center;
+        flex-direction: column;
+        align-self: stretch;
     }
+
     .contacto a{
         padding: 3% 0;
+        display: block;
     }
     /* FOOTER */
     .portfolio .flex{
@@ -260,15 +280,15 @@ footer li{
         justify-content: center;
     }
     .portfolio-child{
-        padding: 2.5rem;
-        width: 50%;
+        flex-basis: 40%;
     }
     footer{
         padding: 1rem;
     }
 }
-@media (max-width: 400px) {
 
+
+@media (max-width: 500px) {
     .flex{
         flex-direction: column;
     }
@@ -281,7 +301,8 @@ footer li{
         align-self: center;
     }
     aside img{
-        width: 80%;
+        width: 70%;
+        padding-top: 4%;
     }
     /* MAIN */
     .card{
@@ -320,5 +341,8 @@ footer li{
     }
     footer{
         padding: 1rem;
+    }
+    .portfolio-child{
+        padding: 2.5rem 20%;
     }
 }
